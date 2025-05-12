@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Editar Usuário</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" name="nome" class="form-control" value="{{ user.nome }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" value="{{ user.email }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="text" name="senha" class="form-control" value="{{ user.senha }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>
+{% endblock %}
